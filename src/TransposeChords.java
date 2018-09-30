@@ -1,30 +1,32 @@
 public class TransposeChords {
 
 	private String chords;
-	private String[] transposedChords;
-	
+	private String scale;
 
 	public TransposeChords() {
 		this.chords = "CDEFGABC"; //Default will always be the C Major scale.
+		this.scale = "D Major";
 	}
 
-	public TransposeChords(String chords) {
+	public TransposeChords(String chords, String scale) {
 		this.chords = chords.toUpperCase(); //set the main chords to transpose & set them as upper case
+		this.scale = scale;
+		sort();
 	}
 
-	public void transpose() {
-		String[] temp = new String[this.chords.length()];
+	public void sort() {
+		String[] current = new String[this.chords.length()];
+		Scale type = new Scale
 
-		//Seperate chords for easier transposing
-		for(int i = 0; i < temp.length; i++) {
-			temp[i] = this.chords.charAt(i) + "";
+		//Sort chords for transposing
+		for(int chord = 0; chord < current.length; chord++) {
+			current[chord] = this.chords.charAt(chord) + "";
+
+			if() {
+
+			}
 		}
 
-
-
-		//Debug
-		for(int i = 0; i < temp.length; i++) {
-			System.out.print(temp [i] + " ");
-		}
+		//Sort scale
 	}
 }
