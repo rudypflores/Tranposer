@@ -10,44 +10,44 @@ public class Scale {
 	}
 
 	//This method will determine how many whole and half steps will be used
-	public int scaleMultiplier(String scale) {
-		int scaleMultiplier = 0;
+	public double scaleMultiplier(String scale) {
+		double scaleMultiplier = 0;
 		switch(scale) {
 			case "C":
 				scaleMultiplier = 0;
 				break;
 			case "C#":
-				scaleMultiplier = 1;
+				scaleMultiplier = 0.5;
 				break;
 			case "D":
-				scaleMultiplier = 2;
+				scaleMultiplier = 1;
 				break;
 			case "D#":
-				scaleMultiplier = 3;
+				scaleMultiplier = 1.5;
 				break;
 			case "E":
-				scaleMultiplier = 4;
+				scaleMultiplier = 2;
 				break;
 			case "F":
-				scaleMultiplier = 5;
+				scaleMultiplier = 2.5;
 				break;
 			case "F#":
-				scaleMultiplier = 6;
+				scaleMultiplier = 3;
 				break;
 			case "G":
-				scaleMultiplier = 7;
+				scaleMultiplier = 3.5;
 				break;
 			case "G#":
-				scaleMultiplier = 8;
+				scaleMultiplier = 4;
 				break;
 			case "A":
-				scaleMultiplier = 9;
+				scaleMultiplier = 4.5;
 				break;
 			case "A#":
-				scaleMultiplier = 10;
+				scaleMultiplier = 5;
 				break;
 			case "B":
-				scaleMultiplier = 11;
+				scaleMultiplier = 5.5;
 				break;
 		}
 		return scaleMultiplier;

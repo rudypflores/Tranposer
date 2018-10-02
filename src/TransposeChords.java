@@ -22,21 +22,22 @@ public class TransposeChords {
 		String[] current = new String[this.chords.length()];
 		String transposedChords = "";
 		
-		//Import array from Scale.java
+		//Import array from Scale.java & store it
 		Scale scaleChord = new Scale();
 		String[] base = scaleChord.getChordTypes();
 
-		//Initialize scale multiplier
-		int index = scaleChord.scaleMultiplier(scale); //Outputs the index of what chord it is
+		//Get the index where the scale will start transposing from
+		double index = scaleChord.scaleMultiplier(this.scale);
 
-		//Define current[]
+		//Iterator for the chords we're transposing
 		for(int chord = 0; chord < current.length; chord++) {
 			current[chord] = this.chords.charAt(chord) + "";
 		}
 
 		//Check for type of scale
+		//Define steps as half steps in increments 0f .5
 		if(this.type.equals("MAJOR")) {
-			for(int i = index; i < this.chords.length()+2; i++) {
+			for(double i = index; i < this.chords.length()+2; i++) {
 				transposedChords += base[i] + " ";
 			}
 		}
