@@ -14,10 +14,10 @@ public class TransposeChords {
 		this.chords = chords.toUpperCase(); //set the main chords to transpose & set them as upper case
 		this.scale = scale.toUpperCase();
 		this.type = type.toUpperCase();
-		sort();
+		transpose();
 	}
 
-	public void sort() {
+	public void transpose() {
 		//Initialize array & string
 		int len = this.chords.length();
 		String transposedChords = "";
@@ -25,13 +25,9 @@ public class TransposeChords {
 		//Access the major and minor chords
 		Scale scale = new Scale();
 
-		if(this.type.equals("MAJOR")) {
-			for(int i = 0; i < len; i++) {
-				for(int j = 0; j < ) {
+		//Define transposedChords
+		
 
-				}
-			}
-		}
 		System.out.println(transposedChords);
 	}
 }
