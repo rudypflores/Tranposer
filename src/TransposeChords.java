@@ -19,29 +19,19 @@ public class TransposeChords {
 
 	public void sort() {
 		//Initialize array & string
-		String[] current = new String[this.chords.length()];
+		int len = this.chords.length();
 		String transposedChords = "";
 		
-		//Import array from Scale.java & store it
-		Scale scaleChord = new Scale();
-		String[] base = scaleChord.getChordTypes();
+		//Access the major and minor chords
+		Scale scale = new Scale();
 
-		//Get the index where the scale will start transposing from
-		double index = scaleChord.scaleMultiplier(this.scale);
-
-		//Iterator for the chords we're transposing
-		for(int chord = 0; chord < current.length; chord++) {
-			current[chord] = this.chords.charAt(chord) + "";
-		}
-
-		//Check for type of scale
-		//Define steps as half steps in increments 0f .5
 		if(this.type.equals("MAJOR")) {
-			for(double i = index; i < this.chords.length()+2; i++) {
-				transposedChords += base[i] + " ";
+			for(int i = 0; i < len; i++) {
+				for(int j = 0; j < ) {
+
+				}
 			}
 		}
-
 		System.out.println(transposedChords);
 	}
 }
