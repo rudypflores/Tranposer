@@ -1,5 +1,5 @@
 /*
-* Minor and Major transposer application
+* Minor and Major Transposer Application
 * @author Rudy L. Pichola-Flores
 * Date: October 4th, 2018
 */
