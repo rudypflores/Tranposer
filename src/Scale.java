@@ -7,15 +7,15 @@ public class Scale {
     private final int[] major = { 2, 2, 1, 2, 2, 2, 1 };
     private final int[] minor = { 2, 1, 2, 2, 1, 2, 2 };
 
-	public String[] getMinor() {
+	public int[] getMinor() {
 		return this.minor;
 	}
 
-	public String[] getMajor() {
+	public int[] getMajor() {
 		return this.major;
 	}
 
-	public String[] getChords() {
+	public String[] getNotes() {
 		return this.notes;
 	}
 }

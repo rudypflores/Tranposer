@@ -24,9 +24,8 @@ public class TransposeChords {
 		
 		//Access the major and minor chords
 		Scale scale = new Scale();
-
-		//Define transposedChords
 		
+		//Define transposedChords
 
 		System.out.println(transposedChords);
 	}
