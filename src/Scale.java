@@ -1,11 +1,17 @@
+/*
+* Minor and Major transposer application
+* @author Rudy L. Pichola-Flores
+* Date: October 4th, 2018
+*/
+
 public class Scale {
 	//Set variables where W = whole step & H = half step
 	//MAJOR = {'W', 'W', 'H', 'W', 'W', 'W', 'H'};
 	//MINOR = {'W', 'H', 'W', 'W', 'H', 'W', 'W'};
 
 	private final String[] notes = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C"};
-    private final int[] major = { 2, 2, 1, 2, 2, 2, 1 };
-    private final int[] minor = { 2, 1, 2, 2, 1, 2, 2 };
+    private final int[] major = {0, 2, 3, 5, 7, 9, 10};
+    private final int[] minor = {0, 1, 3, 5, 6, 8, 10};
 
 	public int[] getMinor() {
 		return this.minor;
@@ -17,5 +23,37 @@ public class Scale {
 
 	public String[] getNotes() {
 		return this.notes;
+	}
+
+	public int index(String scale) {
+		//Set default to C 
+		switch(scale) {
+			case "C":
+				return 0;
+			case "C#":
+				return 1;
+			case "D":
+				return 2;
+			case "D#":
+				return 3;
+			case "E":
+				return 4;
+			case "F":
+				return 5;
+			case "F#":
+				return 6;
+			case "G":
+				return 7;
+			case "G#":
+				return 8;
+			case "A":
+				return 9;
+			case "A#":
+				return 10;
+			case "B":
+				return 11;
+		}
+
+		return 0;
 	}
 }
