@@ -38,7 +38,7 @@ public class TransposeChords {
 		String[] notes = scale.getNotes();
 		int[] major = scale.getMajor();
 		int[] minor = scale.getMinor();
-		int index = scale.index(this.scale);
+		int index = scale.index(this.scale); //Index where scale begins
 
 		//Check for major or minor before transposing
 		if(this.type.equals("MAJOR")) {

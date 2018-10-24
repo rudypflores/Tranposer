@@ -9,9 +9,9 @@ public class Scale {
 	//MAJOR = {'W', 'W', 'H', 'W', 'W', 'W', 'H'};
 	//MINOR = {'W', 'H', 'W', 'W', 'H', 'W', 'W'};
 
-	private final String[] notes = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C"};
-    private final int[] major = {0, 2, 3, 5, 7, 9, 10};
-    private final int[] minor = {0, 1, 3, 5, 6, 8, 10};
+	private final String[] notes = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B", "C8"};
+    private final int[] major = {0, 2, 4, 5, 7, 9, 11, 12};
+    private final int[] minor = {0, 2, 3, 5, 7, 8, 10, 12};
 
 	public int[] getMinor() {
 		return this.minor;

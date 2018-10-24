@@ -8,12 +8,13 @@ import java.util.Scanner;
 
 public class Transposer {
 	public static void main(String[] args) {
-
 		//Purposely done infinte for loop so you can transpose until you close the program
 		boolean engine = true;
 		do {
-			//Save chords that will be transposed
+			//Initialize our scanner
 			Scanner input = new Scanner(System.in);
+
+			//User inputs for chords, scale and type
 			System.out.println("Type the chords you wish to transpose?");
 			String chords = input.nextLine();
 			System.out.println("\nTo what chord do you want to transpose? ");
@@ -24,4 +25,4 @@ public class Transposer {
 			TransposeChords newChords = new TransposeChords(chords, scale, type); //Transpose!
 		} while(engine == true);
 	}
-}
+}  
