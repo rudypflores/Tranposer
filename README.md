@@ -5,7 +5,7 @@ A minimalistic transposer console application that transposes major and minor mu
 ## Features
 Main features to look at before testing this simple application
 
- - Easy to use.
+ - Support for multiple chord transposing.
  - Support for octaves and root notes!
  - Minor chord support through a modified version of the Major chord tranposer logic.
  
