@@ -24,5 +24,5 @@ public class Transposer {
 
 			TransposeChords newChords = new TransposeChords(chords, scale, type); //Transpose!
 		} while(engine == true);
-	} s 
+	}
 }
