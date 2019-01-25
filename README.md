@@ -1,4 +1,4 @@
-# Tranposer
+# Tranposer Console Application
 
 A minimalistic transposer console application that transposes major and minor musical chords!
 
