@@ -9,6 +9,7 @@ public class TestChordList {
 		Scanner input = new Scanner(System.in);
 		char question;
 		boolean done = true;
+		int count = 0;
 
 		System.out.println("Welcome to the transposer console app! place the chords you want to transpose one by one!");
 
@@ -16,11 +17,12 @@ public class TestChordList {
 
 			System.out.println("Enter the next chord: ");
 			c1.insert(input.next());
+
 			System.out.println("Are these all the chords? (Y/N)");
 			question = input.next().charAt(0);
 
 			if(question == 'Y' || question == 'y') {
-				done = false;
+					done = false;
 			}
 
 		} while(done == true);
@@ -28,9 +30,10 @@ public class TestChordList {
 		System.out.println("What type of scale is this progression using? ");
 		c1.scaleCheck(input.next());
 
-		//Transpose chords
-		c1.transpose();
+		System.out.println("To what chord are you transposing?");
+		c1.setScaleChord(input.next());
 
-		System.out.println(c1);
+
+		System.out.println("\n\n" + c1.transpose());
 	}
 }
