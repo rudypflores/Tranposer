@@ -79,7 +79,7 @@ public class LinkedChordList implements ChordList, Transposer {
 			}	
 			count++;
 		}
-
+		System.out.println(scaleStart);
 		this.chordIndex = scaleStart;
 	}
 
