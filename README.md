@@ -6,7 +6,6 @@ A minimalistic transposer console application that transposes major and minor mu
 These are features that are currently being developed and will soon be released!
 
 - Implementation of LinkedList and ChordList ADT
-- FiniteStateMachine Algoritm
 - Inifnite chord progression transposing!
 
 ## Features
