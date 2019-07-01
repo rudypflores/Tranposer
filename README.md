@@ -7,6 +7,7 @@ These are features that are currently being developed and will soon be released!
 
 - Implementation of LinkedList and ChordList ADT
 - Inifnite chord progression transposing!
+- Implementation of UI with the the help of the JavaFX framework
 
 ## Features
 Main features to look at before testing this simple application
