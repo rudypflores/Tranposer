@@ -30,9 +30,9 @@ public class ChordList {
 	}
 
 	//Get the starting point of the scale
-	public int scaleIndex(String scale) {
+	public int noteIndex(String note) {
 		//Set default to C 
-		switch(scale) {
+		switch(note) {
 			case "C":
 				return 0;
 			case "C#":

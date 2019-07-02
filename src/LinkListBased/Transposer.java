@@ -7,6 +7,7 @@ public class Transposer extends ChordList {
 	private String m_notes;
 	private String m_scale;
 	private String m_scaleType;
+	private final int OFFSET = 67;
 
 	//Instantiate variables
 	public Transposer(String notes, String scale, String scaleType) {
@@ -20,33 +21,39 @@ public class Transposer extends ChordList {
 	public String transposeChords() {
 
 		//Tools from parent class
-		ArrayList<Character> transposedChords = new ArrayList<>();
+		ArrayList<Integer> transposedChords = new ArrayList<>();
 		ChordList chords = new ChordList();
 		String[] chordList = chords.getNotes();
-		String[] scaleMajor = chords.getMajor();
-		String[] scaleMinor = chords.getMinor();
+		int[] scaleMajor = chords.getMajor();
+		int[] scaleMinor = chords.getMinor();
 
-		//Get the index of scale passed in
-		int chord = chords.scaleIndex(m_scale);
+		//custom ASCII table conversion
+		int[] fixedNotes = new int[m_notes.length()];
+		String[] userNotes = m_notes.split(" ");
+
+		for(int i = 0; i < m_notes.length(); i++) {
+			fixedNotes[i] = chords.noteIndex(userNotes[i]);
+		}
 
 		//Cycle each note in notes passed in by user
-		for(int note = 0; note < notes.length(); note++) {
+		int cycle = 0;
+
+		for(int note = 0; note < fixedNotes.length; note++) {
+
+			if(cycle >= scaleMajor.length)
+				cycle = 0;
+
 			//Check for type of scale
 			//If the scaletype is major
 			if(m_scaleType.equals("major")) {
 
-				if(chord >= chordList.length)
-					chord -= chordList.length;
-
-				transposedChords.add(chordList[chord]);
-
-				//Go to next chord
-				chord += scaleMajor[note];
+				transposedChords.add(fixedNotes[note] + scaleMajor[cycle] - OFFSET);
 
 			} else if(m_scaleType.equals("minor")) {
 
 			}
 
+			cycle++;
 		}
 
 		return "Transposed chords in " + m_scale + " " + m_scaleType + ": " + transposedChords;
